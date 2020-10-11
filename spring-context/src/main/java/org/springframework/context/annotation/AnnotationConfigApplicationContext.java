@@ -63,7 +63,13 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * through {@link #register} calls and then manually {@linkplain #refresh refreshed}.
 	 */
 	public AnnotationConfigApplicationContext() {
+		/**
+		 * 读取配置类用的，这个流程里面注册了许多创世纪的类，一些后置处理器
+		 */
 		this.reader = new AnnotatedBeanDefinitionReader(this);
+		/**
+		 *
+		 */
 		this.scanner = new ClassPathBeanDefinitionScanner(this);
 	}
 
@@ -84,7 +90,15 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * {@link Configuration @Configuration} classes
 	 */
 	public AnnotationConfigApplicationContext(Class<?>... componentClasses) {
+		// 会先执行父类构造方法去父类看看，第一步就是拿到Bean工厂
+		/**
+		 * public GenericApplicationContext() {
+		 * 		this.beanFactory = new DefaultListableBeanFactory();
+		 * }
+		 */
+//		super();
 		this();
+		// 注册配置类
 		register(componentClasses);
 		refresh();
 	}

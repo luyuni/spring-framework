@@ -5,11 +5,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import top.luyuni.entity.User;
 import top.luyuni.service.UserServeice;
 
-public class Main {
+public class XmlMain {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-context.xml");
 		UserServeice userService = (UserServeice) context.getBean("userService");
-		User user = userService.getUserById(11);
-		System.out.println(user);
+		String hello = userService.sayHello("niyulu");
+		System.out.println(hello);
 	}
 }

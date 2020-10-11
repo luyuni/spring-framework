@@ -5,12 +5,8 @@ import top.luyuni.service.UserServeice;
 
 public class UserServiceImpl implements UserServeice {
 
-
 	@Override
-	public User getUserById(Integer id) {
-		User user = new User();
-		user.setAge(11);
-		user.setUsername("niyulu");
-		return user;
+	public String sayHello(String name) {
+		return "im " + name;
 	}
 }

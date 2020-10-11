@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.22">
+<file name="/Users/niyulu/niyulu-study/spring-framework/luyunix/src/main/java/top/luyuni/Main.java">
+<error line="1" severity="error" message="header.mismatch" source="io.spring.javaformat.checkstyle.check.SpringHeaderCheck"/>
+<error line="5" severity="error" message="导入 &apos;top.luyuni.entity.User&apos; 顺序错误。" source="com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck"/>
+<error line="8" column="1" severity="error" message="工具类应隐藏 public 构造器。" source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+</file>
+<file name="/Users/niyulu/niyulu-study/spring-framework/luyunix/src/main/java/top/luyuni/entity/User.java">
+<error line="1" severity="error" message="header.mismatch" source="io.spring.javaformat.checkstyle.check.SpringHeaderCheck"/>
+<error line="8" column="24" severity="error" message="对实例属性 &apos;username&apos; 的引用需要 &quot;this.&quot;。" source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="24" column="24" severity="error" message="对实例属性 &apos;age&apos; 的引用需要 &quot;this.&quot;。" source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+</file>
+<file name="/Users/niyulu/niyulu-study/spring-framework/luyunix/src/main/java/top/luyuni/service/UserServeice.java">
+<error line="1" severity="error" message="header.missing" source="io.spring.javaformat.checkstyle.check.SpringHeaderCheck"/>
+</file>
+<file name="/Users/niyulu/niyulu-study/spring-framework/luyunix/src/main/java/top/luyuni/service/impl/UserServiceImpl.java">
+<error line="1" severity="error" message="header.mismatch" source="io.spring.javaformat.checkstyle.check.SpringHeaderCheck"/>
+</file>
+</checkstyle>
